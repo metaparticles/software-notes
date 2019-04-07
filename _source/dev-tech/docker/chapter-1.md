@@ -2,7 +2,7 @@
 title: Chapter 1- Basic Commands and Info
 ---
 
-[GOTO Docker Home](/dev-tech/docker) -- {{ page.last_modified_at }}
+[GOTO Docker Home](/software-notes/dev-tech/docker) -- {{ page.last_modified_at }}
 
 ## Chapter 1 - Basic Commands and Info
 
@@ -270,4 +270,4 @@ docker cp {path-to-file-from-host-machine} {container-name}:{path-to-dir-to-copy
 
 ---
 
-[GOTO Chapter 2](/dev-tech/docker/chapter-2)
+[GOTO Chapter 2](/software-notes/dev-tech/docker/chapter-2)

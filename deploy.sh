@@ -8,7 +8,7 @@ git branch -D gh-pages
 git checkout -b gh-pages
 bundle update
 bundle install
-bundle exec jekyll build -s _source
+bundle exec jekyll build -s _source --config _source/config-prod.yml
 rm .gitignore
 touch .gitignore
 echo "*.bundle" >> .gitignore

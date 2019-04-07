@@ -6,4 +6,4 @@ title: Developer Technologies
 
 This zone contains notes on various developer technologies
 
-1. [Docker](/dev-tech/docker)
+1. [Docker](/software-notes/dev-tech/docker)
