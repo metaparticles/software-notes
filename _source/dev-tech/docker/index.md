@@ -17,4 +17,3 @@ This section contains notes pertaining to basic docker, docker networking, etc.
 1. [Chapter 1](/software-notes/dev-tech/docker/chapter-1)
 2. [Chapter 2](/software-notes/dev-tech/docker/chapter-2)
 3. [Chapter 3](/software-notes/dev-tech/docker/chapter-3)
-4. [Chapter 4](/software-notes/dev-tech/docker/chapter-4)

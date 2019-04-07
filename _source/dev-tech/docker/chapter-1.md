@@ -270,4 +270,4 @@ docker cp {path-to-file-from-host-machine} {container-name}:{path-to-dir-to-copy
 
 ---
 
-[GOTO Chapter 2](/software-notes/dev-tech/docker/chapter-2)
+[Chapter 2](/software-notes/dev-tech/docker/chapter-2)
