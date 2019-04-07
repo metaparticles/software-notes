@@ -1,3 +1,8 @@
+# Hi!
+
+This repository contains the setup and data files for hosting the github pages site [metaparticles/software-notes](https://metaparticles.github.io/software-notes/). You need to be added as a collaborator to this repository to contribute.
+
+
 # Requirements/Setup
 
 1. Install Jekyll (https://jekyllrb.com/docs/installation/). Avoid using `sudo` while installing jekyll. For example, use the `gem install --user-install bundler jekyll` (in macOS)

@@ -17,8 +17,3 @@ Here you will find collection of personal notes on various topics. Note formats 
 5. [Notes on Programming Languages](/software-notes/languages) - Quick short points on some well known as well as not so well known parts of various languages/language versions (for example, new features in Java 9, etc.)
 
 6. [Developer Technologies](/software-notes/dev-tech) - Some short points, topics to know thoroughly in popular frameworks, as well as notes on popular open source technologies with sample demo projects for the same (for example, Spring, Docker etc.)
-
-----
-
-# Contributor's Setup
-For contributors, refer to the [Setup Page](/software-notes/setup.html)
