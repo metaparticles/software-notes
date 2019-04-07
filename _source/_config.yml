@@ -6,7 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 github_username: metaparticles
 
-destination: ./docs
+destination: ./_output
 
 # Build settings
 markdown: kramdown
