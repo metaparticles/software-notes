@@ -31,6 +31,7 @@ From the root folder run the below command<br>
 After you have merged your changes to master, switch the local branch to master and take the latest pull.
 Then run the below command(s) from the root folder<br>
 `chmod u+x deploy.sh`
+
 `./deploy.sh`
 
 
