@@ -10,6 +10,9 @@ bundle update
 bundle install
 bundle exec jekyll build -s _source
 rm .gitignore
+touch .gitignore
+echo "*.bundle" >> .gitignore
+echo "*vendor*" >> .gitignore
 rm -rf _source
 cp -R _output/ .
 rm -rf _output
