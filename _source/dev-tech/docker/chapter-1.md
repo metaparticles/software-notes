@@ -2,7 +2,7 @@
 title: Chapter 1- Basic Commands and Info
 ---
 
-[Docker Base Section](/software-notes/dev-tech/docker) -- {{ page.last_modified_at }}
+[Docker Base Section](/software-notes/dev-tech/docker)
 
 ## Chapter 1 - Basic Commands and Info
 
