@@ -13,9 +13,11 @@ rm .gitignore
 rm -rf _source
 cp -R _output/ .
 rm -rf _output
-# git add .
-# git commit -m "Deployment push"
-# git push -f origin gh-pages
-# git stash
-# git checkout master
-# git branch -D gh-pages
+git add .
+git commit -m "Deployment push"
+git push -f origin gh-pages
+rm -rf *
+git checkout .
+git clean -f
+git checkout master
+git branch -D gh-pages
