@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 2 - Resource Allocation and Creating Docker Images</title>
+    <link rel="stylesheet" href="https://metaparticles.github.io/software-notes/assets/scss/git-wiki-style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/software-notes/">Home</a>
+    </nav>
+    <div class="main-section">
+      <p><a href="/software-notes/dev-tech/docker/chapter-1">Chapter 1</a></p>
+
+<h2 id="chapter-2---resource-allocation-and-creating-docker-images">Chapter 2 - Resource Allocation and Creating Docker Images</h2>
+
+<p>To limit memory, you can run
+<code class="highlighter-rouge">docker update -m 400M {container-name}</code>
+If you are running <code class="highlighter-rouge">docker stats</code>, you will see the memory limit reduced to <code class="highlighter-rouge">400MiB</code></p>
+
+<p>To limit cpu, you can run
+<code class="highlighter-rouge">docker update --cpu-shares 512 pipeline --cpus 1</code>
+Here, <code class="highlighter-rouge">--cpu-shares</code> is the relative weight with respect to other containers
+<code class="highlighter-rouge">-cpus</code> denotes the number of cores you want to spread the weight across
+The default share weight allocated to any container, without <code class="highlighter-rouge">--cpu-shares</code> defined is <b>1024</b></p>
+
+<h5 id="building-docker-images">Building Docker Images</h5>
+
+<hr />
+<p>2 approaches to building your own images</p>
+<ol>
+  <li>(Imperative Way) Start with a base image and start modifying it</li>
+  <li>(Automated Way) Create a docker file</li>
+</ol>
+
+<p>Create a free docker account and a repository. In this example my docker account id is <code class="highlighter-rouge">gfy94</code> and docker repository name is <code class="highlighter-rouge">wercker-chromium-node</code>
+To connect to your account from local machine, do
+<code class="highlighter-rouge">docker login</code></p>
+
+<p>This section assumes you are familiar with <code class="highlighter-rouge">git</code> terminology. <code class="highlighter-rouge">git</code> is a popular version control system.
+After making changes to your docker container, you can commit your changes
+<code class="highlighter-rouge">docker commit {container-name} gfy94/wercker-chromium-node:v0.0.1</code>
+<code class="highlighter-rouge">v0.0.1</code> is a random version number which I assigned</p>
+
+<p>Now, if you run <code class="highlighter-rouge">docker images</code>, you will see a new image listed as below:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+gfy94/wercker-chromium-node   v0.0.1              25b804f25e29        6 minutes ago       112MB
+ubuntu                        16.04               0458a4468cbc        5 weeks ago         112MB
+</code></pre></div></div>
+<p>In this example, image id 25b804f25e29 was created by making changes on top of image id 0458a4468cbc. image id 25b804f25e29 is basically a snapshot of container <code class="highlighter-rouge">wercker-chromium-node</code> which I created from ubuntu:16.04 image and on top of which I ran few commands (like installed Java, Node.js, etc.)</p>
+
+<p>Similar to <code class="highlighter-rouge">git log</code>, the command
+<code class="highlighter-rouge">docker image history 25b804f25e29</code>
+gives us a brief summary of commands executed before this snapshot was derived from a container</p>
+
+<p>Similar to <code class="highlighter-rouge">docker inspect {container-name}</code>, we can run
+<code class="highlighter-rouge">docker inspect {image-id}</code>
+to get a detailed info about the image</p>
+
+<p>To push to your docker hub repository, run
+<code class="highlighter-rouge">docker push gfy94/wercker-chromium-node:v0.0.1</code></p>
+
+<p>Method 2 - Dockerfiles</p>
+
+<p>Dockerfiles are similar to make script. The convention for test environment is to create a file named <code class="highlighter-rouge">Dockerfile</code> in the root folder of git repository. If we use any other file name, we hhave to pass the <code class="highlighter-rouge">-f</code> flag to docker build command, with the file path</p>
+
+<p>Add some sample Dockerfile and build commands here</p>
+
+<p>If you give the same build command multiple times, of sub-similar, docker uses cache of previous builds. However, docker is intelligent enough to know if source code has changed, and executes a command from scratch (for example, <code class="highlighter-rouge">mvn clean install</code>) rather than using the cache.
+However, if you are unsure, you can always pass the <code class="highlighter-rouge">--no-cache</code> flag</p>
+
+<p><a href="/software-notes/dev-tech/docker/chapter-3">Chapter 3</a></p>
+
+    </div>
+  </body>
+</html>

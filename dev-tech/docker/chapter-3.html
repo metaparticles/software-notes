@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 3 - Networking</title>
+    <link rel="stylesheet" href="https://metaparticles.github.io/software-notes/assets/scss/git-wiki-style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/software-notes/">Home</a>
+    </nav>
+    <div class="main-section">
+      <p><a href="/software-notes/dev-tech/docker/chapter-2">Chapter 2</a></p>
+
+<h2 id="chapter-3---networking">Chapter 3 - Networking</h2>
+
+<p>docker networks or docker network ls
+docker bridge (or docker network bridge)
+docker ps
+docker network create {network-name} -d bridge
+docker inspect {network-name}
+docker run -it –network none {image-name} /bin/bash -&gt; to disable networking completely
+docker run -it –network host {image-name} /bin/bash -&gt; attach to host network directly</p>
+
+<p>For multi-host networking, we use <code class="highlighter-rouge">overlay</code> network. Overlay networks use a service discovery mechanism. For example, docker swarm creates an overlay network by default.</p>
+
+<p>Connecting Micro-Services
+docker compose</p>
+
+    </div>
+  </body>
+</html>

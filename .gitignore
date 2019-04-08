@@ -1,5 +1,2 @@
-*Gemfile.lock
-*_output*
-*vendor
-*.bundle*
-
+*.bundle
+*vendor*
