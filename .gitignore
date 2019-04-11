@@ -4,6 +4,8 @@
 *.bundle*
 
 
+out/
+
 .idea/*
 *.iml
 target/*
